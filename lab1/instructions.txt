@@ -1,0 +1,38 @@
+Run the apply_oracle_lab1.sql script, which runs three scripts: (a) the cleanup_oracle.sql script and (b) the create_video_store.sql script.
+
+Lab Instructions ←
+
+When you run the sqlplus command from a directory, that directory becomes the home directory. Inside the SQL*Plus environment, you can access any file in the local directory by simply prefacing it with an “@“ symbol. If the file doesn’t exist it raises and exception.
+
+You can check for the existence of the file with the following command:
+
+SQL> !ls
+It will display:
+
+apply_oracle_lab1.sql
+You call the file in sqlplus like this:
+
+SQL> @apply_oracle_lab1.sql
+It should contain the following two calls:
+
+@/home/student/Data/cit325/oracle/lib/cleanup_oracle.sql
+@/home/student/Data/cit325/oracle/lib/Oracle12cPLSQLCode/Introduction/create_video_store.sql
+and they do the following:
+
+The cleanup_oracle.sql script was written to cleanup an Oracle database schema while leaving an Oracle APEX 4 installation untouched. You will need to modify this script if you upgrade Oracle APEX 4.
+The create_video_store.sql script was written for the Oracle Database 12c PL/SQL Programming book and creates a sample video store model for the book and these labs.
+The create_video_store.sql script will display the following when it completes:
+
+FULL_NAME	 TITLE				PRODUCT CHECK_OUT_D RETURN_DATE
+---------------- ------------------------------ ------- ----------- -----------
+Brian Winn	 RoboCop			XBO	17-SEP-15   22-SEP-15
+Brian Winn	 The Hunt for Red October	DVD	17-SEP-15   22-SEP-15
+Doreen Vizquel	 Camelot			Blu	17-SEP-15   22-SEP-15
+Doreen Vizquel	 I Remember Mama		Blu	17-SEP-15   22-SEP-15
+Oscar Vizquel	 Star Wars I			DVD	17-SEP-15   22-SEP-15
+Oscar Vizquel	 Star Wars II			DVD	17-SEP-15   22-SEP-15
+Oscar Vizquel	 Star Wars III			DVD	17-SEP-15   22-SEP-15
+Ian M Sweeney	 Cars				XBO	17-SEP-15   22-SEP-15
+Meaghan Sweeney  Hook				Blu	17-SEP-15   22-SEP-15
+ 
+9 rows selected.
